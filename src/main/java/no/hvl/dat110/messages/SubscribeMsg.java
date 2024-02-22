@@ -18,6 +18,7 @@ public class SubscribeMsg extends Message {
     public void setTopic(String topic) {
         this.topic = topic;
     }
+    @Override
     public String toString() {
         return "SubscribeMsg [topic=" + topic + ", user=" + getUser() + "]";
     }

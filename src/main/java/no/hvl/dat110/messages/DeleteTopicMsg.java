@@ -17,6 +17,7 @@ public class DeleteTopicMsg extends Message {
     public void setTopic(String topic) {
         this.topic = topic;
     }
+    @Override
     public String toString() {
         return "DeletTopicMsg [topic=" + topic + ", user =" + getUser() + "]";
     }

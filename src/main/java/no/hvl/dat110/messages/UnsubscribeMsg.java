@@ -18,6 +18,7 @@ public class UnsubscribeMsg extends Message {
     public void setTopic(String topic) {
         this.topic = topic;
     }
+    @Override
     public String toString() {
         return "UnsubcribeMsg [topic=" + topic + ", user=" + getUser() + "]";
     }
