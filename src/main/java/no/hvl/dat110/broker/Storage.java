@@ -74,7 +74,7 @@ public class Storage {
 		// TODO: create topic in the storage
 		subscriptions.put(topic, ConcurrentHashMap.newKeySet());
 
-		
+
 	
 	}
 
@@ -90,7 +90,7 @@ public class Storage {
 
 		// TODO: add the user as subscriber to the topic
 		
-		throw new UnsupportedOperationException(TODO.method());
+		subscriptions.computeIfAbsent(topic, t -> ConcurrentHashMap.newKeySet()).add(user);
 		
 	}
 
@@ -98,7 +98,6 @@ public class Storage {
 
 		// TODO: remove the user as subscriber to the topic
 
-
-		throw new UnsupportedOperationException(TODO.method());
+		subscriptions.get(topic).remove(user);
 	}
 }
