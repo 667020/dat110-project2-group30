@@ -97,7 +97,7 @@ public class Storage {
 	public void removeSubscriber(String user, String topic) {
 
 		// TODO: remove the user as subscriber to the topic
-		//doofe 
+		//doofe
 		subscriptions.get(topic).remove(user);
 	}
 }
