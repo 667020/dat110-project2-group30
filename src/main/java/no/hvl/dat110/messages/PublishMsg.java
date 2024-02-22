@@ -26,7 +26,9 @@ public class PublishMsg extends Message {
 	public void setTopic(String topic) {
 		this.topic = topic;
 	}
-
+public String toString() {
+		return "PublishMsg [topic=" + topic + ", message=" + message + "]";
+}
 
 // TODO:
 	// Implement object variables - a topic and a message is required
