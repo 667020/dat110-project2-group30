@@ -54,8 +54,8 @@ public class Storage {
 
 		// TODO: add corresponding client session to the storage
 		// See ClientSession class
-		
-		throw new UnsupportedOperationException(TODO.method());
+		ClientSession clientSession = new ClientSession(user, connection);
+		clients.put(user,clientSession);
 		
 	}
 
@@ -63,24 +63,26 @@ public class Storage {
 
 		// TODO: disconnet the client (user) 
 		// and remove client session for user from the storage
+			clients.remove(user);
 		
-		throw new UnsupportedOperationException(TODO.method());
+
 		
 	}
 
 	public void createTopic(String topic) {
 
 		// TODO: create topic in the storage
+		subscriptions.put(topic, ConcurrentHashMap.newKeySet());
 
-		throw new UnsupportedOperationException(TODO.method());
+		
 	
 	}
 
 	public void deleteTopic(String topic) {
 
 		// TODO: delete topic from the storage
+		subscriptions.remove(topic);
 
-		throw new UnsupportedOperationException(TODO.method());
 		
 	}
 
@@ -95,6 +97,7 @@ public class Storage {
 	public void removeSubscriber(String user, String topic) {
 
 		// TODO: remove the user as subscriber to the topic
+
 
 		throw new UnsupportedOperationException(TODO.method());
 	}
