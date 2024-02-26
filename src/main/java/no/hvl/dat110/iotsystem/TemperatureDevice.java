@@ -14,7 +14,7 @@ public class TemperatureDevice {
 
 
 		// create a client object and use it to
-		Client client = new Client("temperatur", Common.BROKERHOST, Common.BROKERPORT);
+		Client client = new Client("sensor", Common.BROKERHOST, Common.BROKERPORT);
 
 		// - connect to the broker - user "sensor" as the user name
 		client.connect();
