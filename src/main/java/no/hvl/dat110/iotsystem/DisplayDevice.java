@@ -32,7 +32,7 @@ public class DisplayDevice {
 		client.unsubscribe(Common.TEMPTOPIC);
 		// - disconnect from the broker
 		client.disconnect();
-		
+
 		System.out.println("Display stopping ... ");
 
 		
